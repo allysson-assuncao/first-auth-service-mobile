@@ -5,14 +5,15 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_background"
-    android:gravity="center"
+    android:background="@drawable/auth_background"
     android:padding="16dp"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
         android:orientation="vertical">
 
         <ImageView
@@ -49,33 +50,61 @@
             android:textSize="20sp" />
 
         <Button
+            android:id="@+id/login_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
-            android:textSize="24sp"
-            android:textColor="@color/white"
             android:backgroundTint="#03A9F4"
-            android:id="@+id/login_button"/>
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
 
-        <GridLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal">
-
+            android:gravity="bottom"
+            android:orientation="horizontal">
             <Button
-                android:layout_width="180dp"
+                android:id="@+id/forgot_password_button"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
                 android:text="Forgot Password?"
-                android:id="@+id/forgot_password_button"/>
+                android:textColor="#03A9F4"/>
 
             <Button
-                android:layout_width="160dp"
+                android:id="@+id/register_button"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
                 android:text="Register"
-                android:id="@+id/register_button"/>
-        </GridLayout>
+                android:textColor="#03A9F4"/>
+        </LinearLayout>
+
+        <!--<androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/forgot_password_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password?"
+                android:textColor="#03A9F4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/register_button"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/register_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:textColor="#03A9F4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/forgot_password_button" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
     </LinearLayout>
 
